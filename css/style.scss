@@ -1,3 +1,12 @@
+//@import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+
+body{
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -144,5 +153,83 @@ header {
     @include max-screen(767px){
       margin-left: 10px;
     }
+  }
+}
+
+
+/*products*/
+
+.products{
+  .prod_item{
+    .for_img{
+      position: relative;
+      img{
+        display: block;
+        width: 100%;
+      }
+      .position_description{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+        .in_stock{
+          display: inline-flex;
+          align-items: center;
+          background-color: white;
+          &:before{
+            content: "";
+            display: inline-block;
+            background-image: url("../image/no.png");
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+          }
+          &.active{
+            &:before{
+              background-image: url("../image/ok.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.contact{
+  padding: 64px 0 56px;
+  .form-control{
+    width: 100%;
+  }
+  .form_group{
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+
+footer{
+  background-color:#0D2436;
+  .border_b{
+    border-bottom: solid 1px rgba(255, 255, 255, 0.08);
+  }
+  .copy{
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    padding: 24px 0 25px;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+
+.container{
+  @include max-screen(767px){
+    padding: 0 16px;
   }
 }
